@@ -12,7 +12,6 @@ import {
 import { Input } from "@/components/ui/input"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { WarpBackground } from "@/components/magicui/warp-background"
 import { z } from "zod"
  
 const formSchema = z.object({
