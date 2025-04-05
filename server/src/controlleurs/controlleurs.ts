@@ -25,7 +25,7 @@ const Controller = {
                     
                 }
             })
-            return res.status(201).json(tache);
+            return res.status(201).json(taches);
             
         } catch (error) {
             res.status(500).json({ error });
@@ -68,7 +68,7 @@ const Controller = {
                     tache
                 }
             })
-            return res.status(200).json(tache);
+            return res.status(200).json(taches);
             
         } catch (error) {
             res.status(500).json({ error });

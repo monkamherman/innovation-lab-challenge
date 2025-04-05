@@ -13,6 +13,7 @@ import { Input } from "@/components/ui/input"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
+import axiosinstance from "@/api/apiAxios"
  
 const formSchema = z.object({
  tache: z.string().min(5).max(50),
@@ -25,8 +26,9 @@ const Home:React.FC = () =>{
         },
       })
      
-      // 2. Define a submit handler.
+     
       function onSubmit(values: z.infer<typeof formSchema>) {
+        axiosinstance.post("/", values)
         // Do something with the form values.
         // ✅ This will be type-safe and validated.
         console.log(values)
@@ -54,6 +56,7 @@ const Home:React.FC = () =>{
         <Button type="submit">creer</Button>
       </form>
     </Form>
+    
     </div>
   )
 }
